@@ -3,7 +3,7 @@
     @scroll.window="scroll = (window.pageYOffset > 50) ? true : false"
     @keydown.window.escape="open = false" 
     :class="{ 'bg-[#0C1728]': scroll, 'bg-transparent': !scroll }"
-    class="bg-transparent fixed w-full transition-colors duration-500 ease-in-out"
+    class="bg-transparent fixed w-full transition-colors duration-500 ease-in-out z-50"
 >
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <a href="/" class="-m-1.5 p-1.5">

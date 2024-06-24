@@ -17,15 +17,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
     @vite(['resources/css/app.css','resources/js/app.js'])
     
     <script defer src="https://unpkg.com/@alpinejs/ui@3.13.1-beta.0/dist/cdn.min.js"></script>
     
     <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
 
+    <link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.css">
+    
     @livewireStyles
 </head>
-<body class="h-full text-[#FCFCFC]">
+<body class="h-full text-[#FCFCFC]" data-scroll-container>
 
     <x-ui.header />
 
@@ -37,6 +40,10 @@
 
     @livewireScripts
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
     @stack('scripts')
 </body>
 </html>
