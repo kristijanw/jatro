@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "linear-gradient(to top, #0c1728 20%, #0c172800), url('img/header.webp')",
+        'hero-pattern': "url('img/header.webp')",
       },
     },
     fontFamily: {
