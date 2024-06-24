@@ -3,7 +3,7 @@
     <div class="bg-[url('img/footerbg.webp')] bg-cover bg-no-repeat">
         <div class="mx-auto max-w-7xl p-6 lg:px-7 py-10">
 
-            <div class="bg-white rounded-lg flex flex-col lg:flex-row overflow-hidden">
+            <div class="bg-white rounded-lg flex flex-col lg:flex-row overflow-hidden shadow-2xl">
                 <img 
                     src="{{ asset('img/footerimg.svg') }}" 
                     class="flex-initial w-full h-44 lg:h-auto lg:w-4/6 object-cover"
