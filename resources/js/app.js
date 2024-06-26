@@ -7,7 +7,13 @@ window.addEventListener("load", function() {
 
     const locoScroll = new LocomotiveScroll({
         el: scroller,
-        smooth: true
+        smooth: true,
+        mobile: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
     });
 
     locoScroll.stop();
@@ -19,7 +25,7 @@ window.addEventListener("load", function() {
     let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
 
     gsap.utils.toArray("section").forEach((section, i) => {
-        section.bg = section.querySelector(".bg-hero-pattern");
+        section.bg = section.querySelector(".parallax-bg");
         
         gsap.fromTo(
             section.bg, 

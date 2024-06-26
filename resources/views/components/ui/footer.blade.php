@@ -1,7 +1,7 @@
 <footer>
 
     <div class="bg-[url('img/footerbg.webp')] bg-cover bg-no-repeat">
-        <div class="mx-auto max-w-7xl p-6 lg:px-7 py-10">
+        <div class="max-w-maxcontainer mx-auto p-6 lg:px-7 py-10">
 
             <div class="bg-white rounded-lg flex flex-col lg:flex-row overflow-hidden shadow-2xl">
                 <img 
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="mt-20 flex flex-col gap-10 lg:flex-row lg:gap-20">
+            <div class="max-w-mincontainer mx-auto mt-20 flex justify-between flex-col gap-10 lg:flex-row lg:gap-20">
                 <div>
                     <a href="/">
                         <x-icons.footerlogo height="60" />
@@ -73,11 +73,11 @@
             
             <div class="flex items-center justify-between">
                 <p class="text-xs leading-5 text-[#CCDCEB] font-semibold">
-                    Jatro  d.o.o. © 2024 All rights reserved
+                    Jatro  d.o.o. © {{ date('Y') }} All rights reserved
                 </p>
 
                 <p class="text-xs leading-5 text-[#CCDCEB] font-semibold">
-                    Designed by: PROSPEKT
+                    Designed by: <a href="https://prospekt.hr/" target="_blank">PROSPEKT</a>
                 </p>
             </div>
 
