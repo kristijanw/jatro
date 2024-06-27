@@ -17,6 +17,9 @@ class OpenLetterForm extends Form
     #[Rule('required')]
     public $content = '';
 
+    #[Rule('accepted')]
+    public $terms = false;
+
     // public Post $post;
 
     // public function setPost($post)

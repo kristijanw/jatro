@@ -20,13 +20,12 @@
 
     @vite(['resources/css/app.css','resources/js/app.js'])
     
-    <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
-
-    <link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.css">
-
     @livewireStyles
-
+    
     <script defer src="https://unpkg.com/@alpinejs/ui@3.13.1-beta.0/dist/cdn.min.js"></script>
+    <link href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css" rel="stylesheet">
+    
+    <link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.css">
 </head>
 <body class="h-full text-[#FCFCFC]" data-scroll-container>
 
