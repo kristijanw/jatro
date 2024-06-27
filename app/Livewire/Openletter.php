@@ -16,6 +16,8 @@ class Openletter extends Component
         $this->form->save();
 
         $this->reset('show');
+
+        $this->dispatch('added');
     }
 
     public function render()

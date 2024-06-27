@@ -141,7 +141,7 @@
                     <p class="font-normal text-[#FCFCFC] text-base mt-2">Check out our positions or send us an open letter</p>
                 </div>
                 
-                <livewire:openletter />
+                <livewire:openletter @added="$refresh" />
             </div>
 
             <hr class="bg-[#4C4C4C] border-none my-10 h-[1px]" />

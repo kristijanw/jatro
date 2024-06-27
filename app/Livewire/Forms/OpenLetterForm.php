@@ -30,10 +30,6 @@ class OpenLetterForm extends Form
     {
         $this->validate();
 
-        dump($this->name);
-        dump($this->email);
-        dd($this->content);
-
         // Post::create([
         //     'title' => $this->title,
         //     'content' => $this->content,
