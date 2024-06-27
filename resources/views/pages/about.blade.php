@@ -133,6 +133,21 @@
 
         <img src="{{ asset("img/joinusbg.png") }}" />
 
+        <div class="max-w-mincontainer mx-auto p-20 bg-[#0C1728] opacity-[95%] -mt-40 rounded-xl">
+            
+            <div class="flex items-end justify-between">
+                <div>
+                    <h2 class="font-exo text-[#FCFCFC] text-5xl font-bold">Join us</h2>
+                    <p class="font-normal text-[#FCFCFC] text-base mt-2">Check out our positions or send us an open letter</p>
+                </div>
+                
+                <livewire:openletter />
+            </div>
+
+            <hr class="bg-[#4C4C4C] border-none my-10 h-[1px]" />
+
+        </div>
+
     </section>
 
 </x-layouts.page>
