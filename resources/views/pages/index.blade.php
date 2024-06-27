@@ -7,7 +7,6 @@
         id="hero" 
         aria-labelledby="home page hero"
         class="object-cover bg-no-repeat bg-right-top"
-        style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);"
         x-data="{ progress: 0, interval: null }"
         x-init="() => { 
             function startInterval() {
@@ -25,9 +24,14 @@
         }"
     >
         {{-- Parallax image --}}
-        <div class="bg-hero-pattern parallax-bg absolute inset-0 w-full h-full max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat"></div>
+        <div class="bg-hero-pattern parallax-bg w-full h-[65vh] max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat relative">
+            <div 
+                style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);"
+                class="absolute bottom-0 w-full h-full"
+            ></div>
+        </div>
 
-        <div class="max-w-maxcontainer mx-auto px-10 py-64">
+        <div class="max-w-maxcontainer mx-auto px-10 pb-64 -mt-96">
             <h1 class="text-3xl w-full lg:w-1/2 font-exo lg:text-5xl !leading-[3.5rem]">
                 Powering Your Needs
                 <span class="text-[#00BAF0] font-semibold">Electrical Engineering,</span>
