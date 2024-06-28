@@ -15,28 +15,32 @@
 
             <hr class="text-[#FCFCFC] w-20 my-10" />
 
-            <p class="text-[#A7E2F9] font-exo font-semibold text-2xl w-full md:w-[51%]">
-                For Engineering, Consulting and Trading.
-                We are The engineers You can trust for a perfect
-                solution to all Your needs.
-            </p>
+            <div class="flex items-start justify-between gap-16">
+                <p class="text-[#A7E2F9] font-exo font-semibold text-2xl w-full">
+                    For Engineering, Consulting and Trading.
+                    We are The engineers You can trust for a perfect
+                    solution to all Your needs.
+                </p>
 
-            <p class="text-white font-semibold text-lg w-full md:w-[51%] mt-10">
-                For Engineering, Consulting and Trading. <br>
-                We are The engineers You can trust for a perfect
-                solution to all Your needs.
-            </p>
+                <p class="text-white font-semibold text-lg w-full">
+                    JATRO is a privately owned company founded in March 1990, in Rijeka Croatia. 
+                    Our main activities are consulting, design and electrical engineering services 
+                    provided to shipyards, ship owners and other engineering/design companies.
+                </p>
+            </div>
         </div>
 
     </section>
 
-    <section class="max-w-mincontainer mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-32">
-        <div class="relative">
-            <img src="{{ asset('img/img1about.png') }}" class="shadow-xl" />
+    <section class="max-w-mincontainer mx-auto px-10 mb-32">
+        {{-- <div class="relative">
             <img src="{{ asset('img/network.svg') }}" class="absolute right-0 -top-24 md:-top-24 w-40 md:w-64"
                 data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
-        </div>
-        <div>
+        </div> --}}
+
+        <img src="{{ asset('img/img1about.jpg') }}" class="shadow-xl w-full rounded-lg overflow-hidden" />
+
+        <div class="bg-gray-500 mx-20">
             <h2 class="text-[#A7E2F9] font-exo font-semibold text-2xl mb-5">
                 Specialized in the Marine Electrical Engineering Projects
             </h2>
@@ -61,7 +65,7 @@
         </div>
     </section>
 
-    <section id="services" class="max-w-mincontainer mx-auto px-10 pb-40">
+    <section id="carrer" class="max-w-mincontainer mx-auto px-10 pb-40">
 
         <div class="w-1/2">
             <small class="font-semibold text-sm text-[#FCFCFC]">What we do</small>
