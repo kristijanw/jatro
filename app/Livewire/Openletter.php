@@ -4,20 +4,26 @@ namespace App\Livewire;
 
 use App\Livewire\Forms\OpenLetterForm;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Openletter extends Component
 {
+    use WithFileUploads;
+
     public OpenLetterForm $form;
 
     public $show = false;
+
+    public $sent = false;
 
     public function add()
     {
         $this->form->save();
 
-        $this->reset('show');
+        $this->sent = true;
 
-        $this->dispatch('added');
+        // $this->reset('show');
+        // $this->dispatch('added');
     }
 
     public function render()

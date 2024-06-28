@@ -47,4 +47,23 @@ window.addEventListener("load", function() {
             );
         }
     });
+
+    // Vertical img parallax
+    const gsapImg = gsap.utils.toArray('.image.vertical_img');
+    gsapImg.forEach((gsVs) => {
+        const itemImg = gsVs.querySelector('.image_bl');
+
+        gsap.to(itemImg, {
+            scrollTrigger: {
+                trigger: gsVs,
+                start: () => 'left right',
+                end: () => 'right left',
+                scrub: true,
+                horizontal: false,
+                refreshPriority: 1
+            },
+            y: 210,
+            ease: "none",
+        });
+    });
 });

@@ -16,3 +16,31 @@ html { font-size: 16px;}
 @media (min-width: 1440px) {
    html {font-size: 16px;}
 }
+
+.vertical_img {
+   position: relative;
+   height: 550px;
+   overflow: hidden;
+   border-radius: 10px;
+}
+.vertical_img .image_bl {
+   position: absolute;
+   width: 100%;
+   height: 550px;
+   top: 0;
+   left: 0;
+   will-change: transform;
+   transform: translateY(-50%);
+}
+
+.vertical_img .image_bl > img {
+   height: 834px;
+   width: 100%;
+   object-fit: cover;
+}
+
+input[type=checkbox]:focus {
+   border-color: inherit;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}

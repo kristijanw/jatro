@@ -2,11 +2,10 @@
 
     <section id="about" aria-labelledby="about page" class="object-cover bg-no-repeat bg-right-top">
         {{-- Parallax image --}}
-        <div class="bg-about-hero-pattern parallax-bg w-full h-[65vh] max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat relative">
-            <div 
-                style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);"
-                class="absolute bottom-0 w-full h-full"
-            ></div>
+        <div
+            class="bg-about-hero-pattern parallax-bg w-full h-[65vh] max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat relative">
+            <div style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);"
+                class="absolute bottom-0 w-full h-full"></div>
         </div>
 
         <div class="max-w-mincontainer mx-auto px-10 pb-20 md:pb-32 -mt-96">
@@ -34,7 +33,8 @@
     <section class="max-w-mincontainer mx-auto px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-32">
         <div class="relative">
             <img src="{{ asset('img/img1about.png') }}" class="shadow-xl" />
-            <img src="{{ asset('img/network.svg') }}" class="absolute right-0 -top-24 md:-top-24 w-40 md:w-64" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
+            <img src="{{ asset('img/network.svg') }}" class="absolute right-0 -top-24 md:-top-24 w-40 md:w-64"
+                data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
         </div>
         <div>
             <h2 class="text-[#A7E2F9] font-exo font-semibold text-2xl mb-5">
@@ -44,7 +44,8 @@
                 We are offering You a broad range of skills and knowledge when
                 it comes to Electrical Engineering Projects.
                 <br><br>
-                Few years ago we established a consortium (AES Group – <span class="font-bold">www.aes-group.eu</span>) with a
+                Few years ago we established a consortium (AES Group – <span class="font-bold">www.aes-group.eu</span>)
+                with a
                 group of design companies from Rijeka (of other professions like mechanical
                 engineering, hull construction, etc..) over which we can provide turnkey
                 solutions with the highest level of professionalism.
@@ -67,7 +68,8 @@
 
             <h2 class="text-[#A7E2F9] font-exo font-medium text-4xl my-4">Services</h2>
 
-            <p class="font-normal text-base text-[#FCFCFC]">It’s hard to choose favorites to display but here are couple of our most significant projects we worked on. Take a quick look.</p>
+            <p class="font-normal text-base text-[#FCFCFC]">It’s hard to choose favorites to display but here are couple
+                of our most significant projects we worked on. Take a quick look.</p>
         </div>
 
         <div class="mt-20 grid grid-cols-2 gap-10">
@@ -131,16 +133,22 @@
 
     <section id="joinus" class="max-w-maxcontainer mx-auto px-10 pb-64">
 
-        <img src="{{ asset("img/joinusbg.png") }}" />
+        <div class="image vertical_img">
+            <div class="image_bl">
+                <img src="{{ asset("img/joinusbg.webp") }}" />
+            </div>
+        </div>
+
 
         <div class="max-w-mincontainer mx-auto p-20 bg-[#0C1728] opacity-[95%] -mt-40 rounded-xl">
-            
+
             <div class="flex items-end justify-between">
                 <div>
                     <h2 class="font-exo text-[#FCFCFC] text-5xl font-bold">Join us</h2>
-                    <p class="font-normal text-[#FCFCFC] text-base mt-2">Check out our positions or send us an open letter</p>
+                    <p class="font-normal text-[#FCFCFC] text-base mt-2">Check out our positions or send us an open
+                        letter</p>
                 </div>
-                
+
                 <livewire:openletter @added="$refresh" />
             </div>
 
