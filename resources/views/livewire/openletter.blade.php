@@ -5,7 +5,15 @@
         </x-dialog.open>
 
         <x-dialog.panel>
-            <form wire:submit="add" class="flex flex-col gap-4">
+
+            <div x-show="$wire.sent" x-cloak class="p-10 flex justify-center flex-col items-center">
+                <x-icons.envelope width="100" />
+                <h2 class="mt-3 text-[#fff] text-center text-2xl">
+                    Vaša zamolba je uspješno poslana, kontaktirat ćemo Vas u najkraćem roku.
+                </h2>
+            </div>
+
+            <form wire:submit="add" class="flex flex-col gap-4" x-show="!$wire.sent" x-cloak>
                 <h2 class="text-2xl text-[#A7E2F9] font-semibold font-exo">Send us an open letter</h2>
 
                 <p class="text-[#FCFCFC] text-base">

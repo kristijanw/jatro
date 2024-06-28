@@ -18,9 +18,9 @@ class OpenLetter extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
-    {
-        //
+    public function __construct(
+        protected $dataForEmail
+    ) {
     }
 
     /**
@@ -30,7 +30,7 @@ class OpenLetter extends Mailable
     {
         return new Envelope(
             from: new Address('jatro@test.com', 'Jatro web'),
-            subject: 'Open Letter',
+            subject: 'Open Letter'
         );
     }
 
@@ -40,7 +40,13 @@ class OpenLetter extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.openletter',
+            view: 'mail.openletter',
+            with: [
+                'name' => $this->dataForEmail['name'],
+                'email' => $this->dataForEmail['email'],
+                'content' => $this->dataForEmail['content'],
+                'terms' => $this->dataForEmail['terms'],
+            ],
         );
     }
 
@@ -52,7 +58,7 @@ class OpenLetter extends Mailable
     public function attachments(): array
     {
         return [
-            // Attachment::fromStorage('/app/documents/test.docx')
+            Attachment::fromStorage("/documents/" . $this->dataForEmail['cvfile']),
         ];
     }
 }

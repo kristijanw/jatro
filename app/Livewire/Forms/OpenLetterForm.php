@@ -11,10 +11,10 @@ use Livewire\Form;
 
 class OpenLetterForm extends Form
 {
-    #[Rule('required|min:3')]
+    #[Rule('required|min:3|regex:/^[a-zA-Z,\ ]+$/')]
     public $name = '';
 
-    #[Rule('required|min:3')]
+    #[Rule('required|min:3|regex:/^[a-zA-Z0-9,\.@ ]+$/')]
     public $email = '';
 
     #[Rule('required|regex:/^[a-zA-Z0-9,\.!?@ ]+$/|max:255')]
@@ -29,28 +29,31 @@ class OpenLetterForm extends Form
     #[Validate('nullable|mimes:pdf,docx|max:1024')]
     public $doc;
 
-    // public Post $post;
-
-    // public function setPost($post)
-    // {
-    //     $this->post = $post;
-    //     $this->title = $post->title;
-    //     $this->content = $post->content;
-    // }
+    private $cvfile_filename = null;
+    private $doc_filename = null;
 
     public function save()
     {
         $this->validate();
 
-        $filename = $this->cvfile->getClientOriginalName();
-        $this->cvfile->storeAs('documents', $filename, 'public');
+        $this->cvfile_filename = $this->cvfile->getClientOriginalName();
+        $this->cvfile->storeAs('documents', $this->cvfile_filename);
 
-        // Post::create([
-        //     'title' => $this->title,
-        //     'content' => $this->content,
-        // ]);
+        if ($this->doc) {
+            $this->doc_filename = $this->cvfile->getClientOriginalName();
+            $this->doc->storeAs('documents', $this->doc_filename);
+        }
 
-        Mail::to('localho2020@gmail.com')->send(new OpenLetter());
+        $dataForEmail = [
+            'name' => $this->name,
+            'email' => $this->email,
+            'content' => $this->content,
+            'terms' => $this->terms,
+            'cvfile' => $this->cvfile_filename,
+            'doc' => $this->doc_filename,
+        ];
+
+        // Mail::to('localho2020@gmail.com')->send(new OpenLetter($dataForEmail));
 
         $this->reset(['name', 'email', 'content', 'terms', 'cvfile', 'doc']);
 

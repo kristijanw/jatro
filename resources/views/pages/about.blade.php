@@ -144,7 +144,7 @@
 
             <div class="flex items-end justify-between">
                 <div>
-                    <h2 class="font-exo text-[#FCFCFC] text-5xl font-bold">Join us</h2>
+                    <h2 id="joinustext" class="transition-all font-exo text-[#FCFCFC] text-5xl font-bold">Join us</h2>
                     <p class="font-normal text-[#FCFCFC] text-base mt-2">Check out our positions or send us an open
                         letter</p>
                 </div>

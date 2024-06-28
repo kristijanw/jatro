@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('img/header.webp')",
+        'hero-pattern': "url('img/header.jpg')",
         'about-hero-pattern': "url('img/aboutheader.png')",
       },
       maxWidth: {
