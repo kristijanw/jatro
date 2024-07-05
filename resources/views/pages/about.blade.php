@@ -2,40 +2,37 @@
 
     <section id="about" aria-labelledby="about page" class="object-cover bg-right-top bg-no-repeat">
         {{-- Parallax image --}}
-        <div
-            class="bg-about-hero-pattern parallax-bg w-full h-[65vh] max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat relative">
-            <div style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);"
-                class="absolute bottom-0 w-full h-full"></div>
-        </div>
+        <div class="bg-about-hero-pattern parallax-bg w-full h-[75vh] pt-64 bg-cover bg-center bg-no-repeat relative">
+            <div style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);" class="absolute bottom-0 w-full h-full"></div>
 
-        <div class="px-10 pb-20 mx-auto max-w-mincontainer md:pb-32 -mt-96">
-            <h1 class="text-3xl w-full lg:w-1/2 font-exo lg:text-5xl !leading-[3.5rem]">
-                About us
-            </h1>
+            <div class="px-10 mx-auto max-w-mincontainer relative">
+                <h1 class="text-3xl w-full lg:w-1/2 font-exo lg:text-5xl !leading-[3.5rem]">
+                    About us
+                </h1>
 
-            <hr class="text-[#FCFCFC] w-20 my-10" />
+                <hr class="text-[#FCFCFC] w-20 my-10" />
 
-            <div class="flex items-start justify-between gap-16">
-                <p class="text-[#A7E2F9] font-exo font-semibold text-2xl w-full">
-                    For Engineering, Consulting and Trading.
-                    We are The engineers You can trust for a perfect
-                    solution to all Your needs.
-                </p>
+                <div class="flex items-start justify-between gap-16">
+                    <p class="text-[#A7E2F9] font-exo font-semibold text-2xl w-full">
+                        For Engineering, Consulting and Trading.
+                        We are The engineers You can trust for a perfect
+                        solution to all Your needs.
+                    </p>
 
-                <p class="w-full text-lg font-semibold text-white">
-                    JATRO is a privately owned company founded in March 1990, in Rijeka Croatia.
-                    Our main activities are consulting, design and electrical engineering services
-                    provided to shipyards, ship owners and other engineering/design companies.
-                </p>
+                    <p class="w-full text-lg font-semibold text-white">
+                        JATRO is a privately owned company founded in March 1990, in Rijeka Croatia.
+                        Our main activities are consulting, design and electrical engineering services
+                        provided to shipyards, ship owners and other engineering/design companies.
+                    </p>
+                </div>
             </div>
         </div>
-
     </section>
 
     <section class="px-10 mx-auto mb-32 max-w-mincontainer">
         {{-- <div class="relative">
             <img src="{{ asset('img/network.svg') }}" class="absolute right-0 w-40 -top-24 md:-top-24 md:w-64"
-                data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
+        data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
         </div> --}}
 
         <div></div>
