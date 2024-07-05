@@ -2,7 +2,7 @@
     x-data="{ open: false, scroll: false }" 
     @scroll.window="scroll = (window.pageYOffset > 50) ? true : false"
     @keydown.window.escape="open = false" 
-    :class="{ 'bg-[#0C1728]': scroll, 'bg-transparent': !scroll }"
+    
     class="bg-transparent fixed w-full transition-colors duration-500 ease-in-out z-50"
 >
     <nav class="max-w-maxcontainer mx-auto flex items-center justify-between p-6 lg:px-8" aria-label="Global">

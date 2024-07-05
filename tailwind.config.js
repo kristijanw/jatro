@@ -10,6 +10,7 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('img/header.jpg')",
         'about-hero-pattern': "url('img/aboutheader.png')",
+        'custom-gradient': 'linear-gradient(270deg, rgba(12, 23, 40, 0) 0%, rgba(12, 23, 40, 0.7) 24.03%, #0C1728 96.11%)',
       },
       maxWidth: {
         'maxcontainer': '1438px',
@@ -17,7 +18,7 @@ export default {
       },
     },
     fontFamily: {
-      'exo': 'Exo, sans-serif'
+      'exo': 'Arial, sans-serif'
     },
   },
   plugins: [],

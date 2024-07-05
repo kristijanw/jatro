@@ -1,6 +1,6 @@
 <x-layouts.page title="{{ config('site.title') }} - About us" description="{{ config('site.description') }}">
 
-    <section id="about" aria-labelledby="about page" class="object-cover bg-no-repeat bg-right-top">
+    <section id="about" aria-labelledby="about page" class="object-cover bg-right-top bg-no-repeat">
         {{-- Parallax image --}}
         <div
             class="bg-about-hero-pattern parallax-bg w-full h-[65vh] max-h-[60%] -z-10 bg-cover bg-center bg-no-repeat relative">
@@ -8,7 +8,7 @@
                 class="absolute bottom-0 w-full h-full"></div>
         </div>
 
-        <div class="max-w-mincontainer mx-auto px-10 pb-20 md:pb-32 -mt-96">
+        <div class="px-10 pb-20 mx-auto max-w-mincontainer md:pb-32 -mt-96">
             <h1 class="text-3xl w-full lg:w-1/2 font-exo lg:text-5xl !leading-[3.5rem]">
                 About us
             </h1>
@@ -22,9 +22,9 @@
                     solution to all Your needs.
                 </p>
 
-                <p class="text-white font-semibold text-lg w-full">
-                    JATRO is a privately owned company founded in March 1990, in Rijeka Croatia. 
-                    Our main activities are consulting, design and electrical engineering services 
+                <p class="w-full text-lg font-semibold text-white">
+                    JATRO is a privately owned company founded in March 1990, in Rijeka Croatia.
+                    Our main activities are consulting, design and electrical engineering services
                     provided to shipyards, ship owners and other engineering/design companies.
                 </p>
             </div>
@@ -32,15 +32,17 @@
 
     </section>
 
-    <section class="max-w-mincontainer mx-auto px-10 mb-32">
+    <section class="px-10 mx-auto mb-32 max-w-mincontainer">
         {{-- <div class="relative">
-            <img src="{{ asset('img/network.svg') }}" class="absolute right-0 -top-24 md:-top-24 w-40 md:w-64"
+            <img src="{{ asset('img/network.svg') }}" class="absolute right-0 w-40 -top-24 md:-top-24 md:w-64"
                 data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.07" />
         </div> --}}
 
-        <img src="{{ asset('img/img1about.jpg') }}" class="shadow-xl w-full rounded-lg overflow-hidden" />
+        <div></div>
 
-        <div class="bg-gray-500 mx-20">
+        <img src="{{ asset('img/img1about.jpg') }}" class="w-full overflow-hidden rounded-lg shadow-xl" />
+
+        <div class="mx-20 bg-gray-500">
             <h2 class="text-[#A7E2F9] font-exo font-semibold text-2xl mb-5">
                 Specialized in the Marine Electrical Engineering Projects
             </h2>
@@ -60,12 +62,12 @@
                 We hope You will enjoy our products as much as we enjoy offering them to You.
                 We are very proud of our strong 10-year heritage of serving clients and
                 look forward to continuing successful customer partnership for the
-                next 10 years and beyond. 
+                next 10 years and beyond.
             </p>
         </div>
     </section>
 
-    <section id="carrer" class="max-w-mincontainer mx-auto px-10 pb-40">
+    <section id="carrer" class="px-10 pb-40 mx-auto max-w-mincontainer">
 
         <div class="w-1/2">
             <small class="font-semibold text-sm text-[#FCFCFC]">What we do</small>
@@ -76,10 +78,10 @@
                 of our most significant projects we worked on. Take a quick look.</p>
         </div>
 
-        <div class="mt-20 grid grid-cols-2 gap-10">
+        <div class="grid grid-cols-2 gap-10 mt-20">
 
             <div class="flex items-start gap-5">
-                <x-icons.consulting />
+                <x-icons.home.basicdesign width="50" height="50" />
 
                 <div>
                     <p class="text-[#A7E2F9] font-exo font-semibold text-2xl">CONSULTING</p>
@@ -92,7 +94,7 @@
                 </div>
             </div>
             <div class="flex items-start gap-5">
-                <x-icons.consulting />
+                <x-icons.home.basicdesign width="50" height="50" />
 
                 <div>
                     <p class="text-[#A7E2F9] font-exo font-semibold text-2xl">CONSULTING</p>
@@ -105,7 +107,7 @@
                 </div>
             </div>
             <div class="flex items-start gap-5">
-                <x-icons.consulting />
+                <x-icons.home.basicdesign width="50" height="50" />
 
                 <div>
                     <p class="text-[#A7E2F9] font-exo font-semibold text-2xl">CONSULTING</p>
@@ -118,7 +120,7 @@
                 </div>
             </div>
             <div class="flex items-start gap-5">
-                <x-icons.consulting />
+                <x-icons.home.basicdesign width="50" height="50" />
 
                 <div>
                     <p class="text-[#A7E2F9] font-exo font-semibold text-2xl">CONSULTING</p>
@@ -135,11 +137,11 @@
 
     </section>
 
-    <section id="joinus" class="max-w-maxcontainer mx-auto px-10 pb-64">
+    <section id="joinus" class="px-10 pb-64 mx-auto max-w-maxcontainer">
 
         <div class="image vertical_img">
             <div class="image_bl">
-                <img src="{{ asset("img/joinusbg.webp") }}" />
+                <img src="{{ asset('img/joinusbg.webp') }}" />
             </div>
         </div>
 
