@@ -18,7 +18,7 @@ export default {
       },
     },
     fontFamily: {
-      'exo': 'Arial, sans-serif'
+      'exo': 'Exo, sans-serif'
     },
   },
   plugins: [],
