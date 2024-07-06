@@ -1,3 +1,22 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    padding: calc(0.5 + 1.5vw) 0;
+}
+
 html.is-changing .transition-main {
     transition: transform 400ms ease-in-out;
 }
@@ -17,7 +36,7 @@ html.is-animating.is-rendering .transition-main {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 9999999;
+    z-index: 999;
     background-color: var(--swup-blue-darker);
     opacity: 0;
     transform: translate3d(0, calc(-1 * 100% * var(--overlay-direction, 1)), 0);

@@ -1,6 +1,14 @@
 import './bootstrap';
 
-window.addEventListener("load", function () {
+swup.hooks.on('page:view', () => {
+    runScripts();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    runScripts();
+});
+
+function runScripts() {
     gsap.registerPlugin(ScrollTrigger);
 
     const scroller = document.querySelector('[data-scroll-container]');
@@ -16,10 +24,7 @@ window.addEventListener("load", function () {
         }
     });
 
-    locoScroll.stop();
-    setTimeout(() => {
-        locoScroll.start();
-    }, 5000);
+    locoScroll.start();
 
     // GSAP vertical parallax image
     let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
@@ -66,6 +71,4 @@ window.addEventListener("load", function () {
             ease: "none",
         });
     });
-
-    console.log('ok')
-});
+}

@@ -30,15 +30,13 @@
 
 <body class="h-full text-[#FCFCFC]" data-scroll-container>
     
-    <div id="swup" class="transition-main">
-        <x-ui.header />
+    <x-ui.header />
 
-        <main id="main_content" aria-labelledby="main website content">
-            {{ $slot }}
-        </main>
+    <main id="swup" class="transition-main" aria-labelledby="main website content">
+        {{ $slot }}
+    </main>
 
-        <x-ui.footer />
-    </div>
+    <x-ui.footer />
 
     <div class="overlay transition-overlay"></div>
 
