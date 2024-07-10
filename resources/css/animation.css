@@ -22,11 +22,11 @@ html.is-changing .transition-main {
 }
 
 html.is-animating.is-leaving .transition-main {
-    transform: translateY(calc(1 * 5vh * var(--overlay-direction, 1)));
+    transform: translateY(calc(1 * 0vh * var(--overlay-direction, 1)));
 }
 
 html.is-animating.is-rendering .transition-main {
-    transform: translateY(calc(-1 * 5vh * var(--overlay-direction, 1)));
+    transform: translateY(calc(-1 * 0vh * var(--overlay-direction, 1)));
 }
 
 
@@ -54,4 +54,9 @@ html.is-animating .transition-overlay {
 
 html.is-rendering .transition-overlay {
     transform: translate3d(0, calc(var(--overlay-direction, 1) * 100%), 0);
+}
+
+.swup-progress-bar {
+    height: 3px;
+    background-color: rgb(107, 95, 56);
 }

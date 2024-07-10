@@ -11,21 +11,6 @@ window.addEventListener("DOMContentLoaded", () => {
 function runScripts() {
     gsap.registerPlugin(ScrollTrigger);
 
-    const scroller = document.querySelector('[data-scroll-container]');
-
-    const locoScroll = new LocomotiveScroll({
-        el: scroller,
-        smooth: true,
-        mobile: {
-            smooth: true
-        },
-        tablet: {
-            smooth: true
-        }
-    });
-
-    locoScroll.start();
-
     // GSAP vertical parallax image
     let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
 
@@ -71,4 +56,19 @@ function runScripts() {
             ease: "none",
         });
     });
+
+    const scroller = document.querySelector('[data-scroll-container]');
+
+    const locoScroll = new LocomotiveScroll({
+        el: scroller,
+        smooth: true,
+        mobile: {
+            smooth: true
+        },
+        tablet: {
+            smooth: true
+        }
+    });
+
+    locoScroll.start();
 }

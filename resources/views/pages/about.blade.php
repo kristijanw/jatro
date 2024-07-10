@@ -2,7 +2,7 @@
 
     <section id="about" aria-labelledby="about page" class="object-cover bg-right-top bg-no-repeat">
         {{-- Parallax image --}}
-        <div class="bg-about-hero-pattern parallax-bg w-full h-[75vh] pt-64 bg-cover !bg-top bg-no-repeat relative">
+        <section class="bg-about-hero-pattern parallax-bg w-full h-[75vh] pt-64 bg-cover bg-top bg-no-repeat relative">
             <div style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);" class="absolute top-0 bottom-0 w-full h-full"></div>
 
             <div class="px-10 mx-auto max-w-mincontainer relative">
@@ -26,7 +26,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
     <section class="px-10 mx-auto mb-32 max-w-mincontainer">

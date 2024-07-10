@@ -42,16 +42,21 @@
 
     @livewireScripts
 
-    <script src="https://unpkg.com/swup@4"></script>
-    <script>
-        const swup = new Swup({
-            containers: ["#swup"],
-        });
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/swup@4"></script>
+    <script src="https://unpkg.com/@swup/progress-plugin@3"></script>
+    <script>
+        const swup = new Swup({
+            cache: false,
+            containers: ["#swup"],
+            plugins: [
+                new SwupProgressPlugin()
+            ]
+        });
+    </script>
 
     @stack('scripts')
 </body>

@@ -15,7 +15,7 @@
             startInterval(); 
         }">
         {{-- Parallax image --}}
-        <div class="bg-hero-pattern parallax-bg w-full h-screen pt-64 bg-cover !bg-top bg-no-repeat relative">
+        <section class="bg-hero-pattern parallax-bg w-full h-screen pt-64 bg-cover bg-top bg-no-repeat relative">
             <div style="background-image: linear-gradient(to top, #0c1728 20%, #0c172800);" class="absolute top-0 bottom-0 w-full h-full"></div>
 
             <div class="max-w-maxcontainer mx-auto px-10 relative">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     </section>
 

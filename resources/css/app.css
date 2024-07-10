@@ -4,6 +4,7 @@
 
 :root {
    --swup-blue-darker: hsla(216, 54%, 10%, 1);
+   --overlay-direction: 1;
 }
 
 html {
