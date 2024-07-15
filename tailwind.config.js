@@ -9,6 +9,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('img/header.jpg')",
+        'hero-pattern2': "url('img/header2.jpg')",
         'about-hero-pattern': "url('img/aboutheader.png')",
         'custom-gradient': 'linear-gradient(270deg, rgba(12, 23, 40, 0) 0%, rgba(12, 23, 40, 0.7) 24.03%, #0C1728 96.11%)',
       },

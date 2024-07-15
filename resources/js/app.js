@@ -14,12 +14,10 @@ function runScripts() {
     // GSAP vertical parallax image
     let getRatio = el => window.innerHeight / (window.innerHeight + el.offsetHeight);
 
-    gsap.utils.toArray("section").forEach((section, i) => {
-        section.bg = section.querySelector(".parallax-bg");
-
-        if (section.bg != null) {
+    gsap.utils.toArray("section.parallax-bg").forEach((section, i) => {
+        if (section != null) {
             gsap.fromTo(
-                section.bg,
+                section,
                 {
                     backgroundPosition: () => i ? `50% ${-window.innerHeight * getRatio(section)}px` : "50% 0px"
                 },

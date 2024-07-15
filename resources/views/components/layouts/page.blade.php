@@ -27,6 +27,8 @@
     <link href="{{ asset('css/tailwindcss-forms.css') }}" rel="stylesheet">
 
     <link ref="stylesheet" href="{{ asset('css/locomotive-scroll.css') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="h-full text-[#FCFCFC]" data-scroll-container>
@@ -51,6 +53,46 @@
         const swup = new Swup({
             cache: false,
             containers: ["#swup"]
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            allowTouchMove: false,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false
+            },
+            on: {
+                autoplay: function() {
+                    const activeSlide = this.slides[this.activeIndex];
+                    const progressBar = activeSlide.querySelector(".autoplay-progress > div");
+                    if (progressBar) {
+                        progressBar.style.width = '0%';
+                    }
+                },
+                autoplayTimeLeft(s, time, progress) {
+                    const activeSlide = s.slides[s.activeIndex];
+                    const progressBar = activeSlide.querySelector(".autoplay-progress > div");
+                    if (progressBar) {
+                        progressBar.style.width = `${(1 - progress) * 100}%`;
+                    }
+                },
+                slideChange: function() {
+                    // Reset progress bars on slide change
+                    this.slides.forEach(slide => {
+                        const progressBar = slide.querySelector(".autoplay-progress > div");
+                        if (progressBar) {
+                            progressBar.style.width = '0%';
+                        }
+                    });
+                }
+            }
         });
     </script>
 

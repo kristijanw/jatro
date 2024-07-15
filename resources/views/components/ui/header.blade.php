@@ -11,11 +11,11 @@
         <div class="flex">
             <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
                 @click="open = true">
-                <span class="sr-only">Open main menu</span>
+                <span class="uppercase font-bold text-base text-[#FCFCFC] mr-5">menu</span>
                 <x-icons.menu class="h-6 w-6" />
             </button>
         </div>
-        {{-- <div class="hidden lg:flex lg:items-center lg:gap-x-8">
+        <div class="hidden lg:flex lg:items-center lg:gap-x-8">
             <a href="#" class="text-sm font-bold uppercase">Services & Projects</a>
             <a href="/about" class="text-sm font-bold uppercase">About us</a>
             <a href="#" class="text-sm font-bold uppercase">News</a>
@@ -24,10 +24,10 @@
             <a href="#" class="text-sm font-semibold leading-6">
                 <x-icons.linkedin />
             </a>
-        </div> --}}
+        </div>
     </nav>
 
-    <div class="" x-ref="dialog" x-show="open" aria-modal="true" x-cloak>
+    <div x-ref="dialog" x-show="open" aria-modal="true" x-cloak>
         <div class="fixed inset-0 z-10 bg-slate-900 opacity-80"></div>
         <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-slate-50 dark:bg-slate-900 px-20 py-10 sm:ring-1 sm:ring-slate-900/10 dark:sm:ring-slate-50/10"
             @click.away="open = false">
