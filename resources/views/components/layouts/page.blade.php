@@ -25,9 +25,8 @@
 
     @livewireStyles
 
-    <script defer src="https://unpkg.com/@alpinejs/ui@3.13.1-beta.0/dist/cdn.min.js"></script>
-    <link href="{{ asset('css/tailwindcss-forms.css') }}" rel="stylesheet">
-
+    <script defer src="{{ asset('js/alpinejs-ui.js') }}"></script>
+    <link href=" {{ asset('css/tailwindcss-forms.css') }}" rel="stylesheet">
     <link ref="stylesheet" href="{{ asset('css/locomotive-scroll.css') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -46,7 +45,8 @@
 
     @livewireScripts
 
-    <script src="{{ asset('js/locomotive-scroll.js') }}"></script>
+    <script src="{{ asset('js/locomotive-scroll.js') }}">
+    </script>
     <script src="{{ asset('js/gsap.js') }}"></script>
     <script src="{{ asset('js/ScrollTrigger.js') }}"></script>
 

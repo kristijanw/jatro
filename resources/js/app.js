@@ -75,10 +75,10 @@ function runScripts() {
         effect: "fade",
         loop: true,
         allowTouchMove: false,
-        autoplay: {
-            delay: 7000,
-            disableOnInteraction: false
-        },
+        // autoplay: {
+        //     delay: 7000,
+        //     disableOnInteraction: false
+        // },
         on: {
             autoplay: function() {
                 const activeSlide = this.slides[this.activeIndex];
@@ -90,8 +90,6 @@ function runScripts() {
             autoplayTimeLeft(s, time, progress) {
                 const activeSlide = s.slides[s.activeIndex];
                 const progressBar = activeSlide.querySelector(".autoplay-progress > div");
-
-                console.log((1 - progress) * 100)
 
                 if (progressBar) {
                     progressBar.style.width = `${(1 - progress) * 100 + 7.5}%`;

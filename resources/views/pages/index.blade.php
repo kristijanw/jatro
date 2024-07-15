@@ -42,10 +42,23 @@
                             <div class="bg-[url('img/imgte.png')] bg-cover bg-center py-14 relative rounded-lg">
                                 <div class="absolute inset-0 bg-custom-gradient z-10"></div>
 
-                                <div class="px-10 z-20 relative flex items-center gap-10">
+                                <div class="px-10 z-20 relative flex items-start gap-10">
                                     <div class="flex items-center gap-3">
                                         <x-icons.home.basicdesign width="70" height="70" />
-                                        <p class="m-0 text-[#DDF4FD] font-exo text-lg">Concept design</p>
+                                        <div x-data="{ isExpanded: false }">
+                                            <p class="m-0 text-[#DDF4FD] font-exo text-lg cursor-pointer"
+                                                x-on:click="isExpanded = !isExpanded">Concept design</p>
+                                            <div class="transform transition duration-300 ease-in-out"
+                                                x-show="isExpanded" x-cloak x-collapse x-collapse.duration.500ms>
+                                                <ul>
+                                                    <li>Test</li>
+                                                    <li>test1</li>
+                                                    <li>test2</li>
+                                                    <li>test3</li>
+                                                    <li>test4</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="flex items-center gap-3">
                                         <x-icons.home.detailengineering width="70" height="70" />
@@ -59,6 +72,11 @@
                                         <x-icons.home.sitesupport width="70" height="70" />
                                         <p class="m-0 text-[#DDF4FD] font-exo text-lg">Site support</p>
                                     </div>
+
+                                    <x-ui.button text="show more" type="a" link="/about"
+                                        class="ml-auto bg-[#0C1728] border-[#00BAF0] text-white flex items-center gap-4">
+                                        <x-icons.arrow-blue-right />
+                                    </x-ui.button>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +117,7 @@
                                 </div>
                             </div>
 
-                            <div class="bg-[url('img/imgte.png')] bg-cover bg-center py-14 relative rounded-lg">
+                            <div class="bg-[url('img/imgte1.png')] bg-cover bg-center py-14 relative rounded-lg">
                                 <div class="absolute inset-0 bg-custom-gradient z-10"></div>
 
                                 <div class="px-10 z-20 relative flex items-center gap-10">
@@ -119,6 +137,11 @@
                                         <x-icons.home.sitesupport width="70" height="70" />
                                         <p class="m-0 text-[#DDF4FD] font-exo text-lg">Site support</p>
                                     </div>
+
+                                    <x-ui.button text="show more" type="a" link="/about"
+                                        class="ml-auto bg-[#0C1728] border-[#00BAF0] text-white flex items-center gap-4">
+                                        <x-icons.arrow-blue-right />
+                                    </x-ui.button>
                                 </div>
                             </div>
                         </div>
