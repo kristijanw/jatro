@@ -75,10 +75,10 @@ function runScripts() {
         effect: "fade",
         loop: true,
         allowTouchMove: false,
-        // autoplay: {
-        //     delay: 7000,
-        //     disableOnInteraction: false
-        // },
+        autoplay: {
+            delay: 7000,
+            disableOnInteraction: false
+        },
         on: {
             autoplay: function() {
                 const activeSlide = this.slides[this.activeIndex];
