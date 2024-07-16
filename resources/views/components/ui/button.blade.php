@@ -8,8 +8,7 @@
     {{ $slot }}
 </button>
 <?php else: ?>
-<a href="{{ $link ?? '#' }}" {{ $attributes->merge(['class' => 'inline-block uppercase text-black font-bold px-5 py-3
-    border border-[#2A2A2A] rounded']) }}
+<a href="{{ $link ?? '#' }}" {{ $attributes->merge(['class' => 'inline-block uppercase text-black font-bold px-5 py-3 rounded']) }}
     >
     {{ $text }}
     {{ $slot }}

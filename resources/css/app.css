@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+   .text-transparent-stroke {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #66CEF5;
+      opacity: 0.6;
+   }
+}
+
 :root {
    --swup-blue-darker: hsla(216, 54%, 10%, 1);
    --overlay-direction: 1;

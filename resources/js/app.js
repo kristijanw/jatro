@@ -79,8 +79,12 @@ function runScripts() {
             delay: 7000,
             disableOnInteraction: false
         },
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev",
+        },
         on: {
-            autoplay: function() {
+            autoplay: function () {
                 const activeSlide = this.slides[this.activeIndex];
                 const progressBar = activeSlide.querySelector(".autoplay-progress > div");
                 if (progressBar) {
@@ -95,7 +99,7 @@ function runScripts() {
                     progressBar.style.width = `${(1 - progress) * 100 + 7.5}%`;
                 }
             },
-            slideChange: function() {
+            slideChange: function () {
                 // Reset progress bars on slide change
                 this.slides.forEach(slide => {
                     const progressBar = slide.querySelector(".autoplay-progress > div");
